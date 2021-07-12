@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <title>Lanchonete</title>
+    <link rel="stylesheet" href="estilo.css">
+</head>
+<body>
+    <header class="tabela-produtos">
+        <h2 class="tabela-titulo">Tabela de sanduíches</h2>
+        <div class="tabela-cabecalho">
+            <div class="tabela-linha">
+                <p class="tabela-celula">Código</p>
+                <p class="tabela-celula">Produto</p>
+                <p class="tabela-celula">Preço (R$)</p>
+            </div>
+        </div>
+        <div class="tabela-corpo">
+            <div class="tabela-linha">
+                <p class="tabela-celula">1</p>
+                <p class="tabela-celula">Americano</p>
+                <p class="tabela-celula">8,00</p>
+            </div>
+            <div class="tabela-linha">
+                <p class="tabela-celula">2</p>
+                <p class="tabela-celula">Cheesburguer</p>
+                <p class="tabela-celula">3,00</p>
+            </div>
+            <div class="tabela-linha">
+                <p class="tabela-celula">3</p>
+                <p class="tabela-celula">Misto quente</p>
+                <p class="tabela-celula">4,00</p>
+            </div>
+            <div class="tabela-linha">
+                <p class="tabela-celula">4</p>
+                <p class="tabela-celula">Queijo quente</p>
+                <p class="tabela-celula">4,50</p>
+            </div>
+            <div class="tabela-linha">
+                <p class="tabela-celula">5</p>
+                <p class="tabela-celula">Bauru</p>
+                <p class="tabela-celula">6,00</p>
+            </div>
+        </div>
+    </header>
+
+    <main class="pedido">
+        <h2 class="pedido-titulo">Faça seu pedido</h2>
+        
+        <form class="pedido-selecao">
+            <label for="pedido-numero" class="pedido-descricao">Número</label>
+            <input type="number" max="5" min="1" id="pedido-numero" class="pedido-numero" required>
+            <label class="pedido-descricao" for="pedido-quantidade">Quantidade</label>
+            <input type="number" max="99" min="1" id="pedido-quantidade" class="pedido-numero" required>
+            <input type="submit" value="Fazer pedido" class="pedido-botao">
+        </form>
+    </main>
+
+    <section class="lista">
+        <h2 class="lista-titulo">Lista de pedidos</h2>
+        <div class="lista-cabecalho"></div>
+        <div class="lista-pedidos"></div>
+    </section>
+
+    <div class="total">
+        <p class="total-texto">Renda diária</p>
+        <input type="submit" class="total-botao" value="Verificar">
+        <div class="total-resultados"></div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
