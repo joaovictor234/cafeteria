@@ -84,9 +84,27 @@ body {
     justify-content: center;
     flex-direction: column;
 }
+.lista-cabecalho {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
 .lista-titulo {
     color: #fdfdfd;
     text-align: center;
+    margin-left: 1rem;
+}
+.botao-acao {
+    margin-right: 1rem;
+    padding: 0.5rem 1rem;
+    background: #333;
+    color: #fdfdfd;
+    border-radius: 10px;
+    border-style: none;
+    transition: 0.5s;
+}
+.botao-acao:hover {
+    background: rgb(114, 114, 114);
 }
 .lista-pedido {
     background: #8f617e;
@@ -143,4 +161,7 @@ body {
     color: #333;
     margin: 1rem;
     text-align: center;
+}
+.esconder {
+    display: none;
 }

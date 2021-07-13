@@ -3,6 +3,7 @@
 const opcoes = [[1, "Americano", 8.0], [2, "Cheesburguer", 3.0], [3, "Misto quente", 4.0], [4, "Queijo quente", 4.5], [5, "Bauru", 6.0]]
 let listaPedidos = document.querySelector('.lista-pedidos')
 let total = document.querySelector('.total-resultados')
+let listaCabecalho = document.querySelector('.lista-cabecalho')
 
 /*contadores*/
 let numPedido = 0
@@ -25,11 +26,32 @@ const fazPedido = (evento) => {
             numPedidosTotal += qtd
             numValorTotal += (opcoes[i-1][2])*qtd
         }
-    }
+    } 
     listaPedidos.innerHTML += pedido
 }
 
-/*função para gerar o html com os resultados*/
+const esconderListaDePedidos= () => {
+    let valor = listaPedidos.classList.toggle('esconder')
+    if(valor) {
+        botaoEsconder.value = "Mostrar Pedidos"
+    } else {
+        botaoEsconder.value = "Esconder Pedidos"
+    }
+}
+
+const botaoEsconder = document.querySelector('.botao-esconder')
+botaoEsconder.addEventListener('click', esconderListaDePedidos)
+
+const excluirPedidos = () => {
+    listaPedidos.remove()
+    numPedido = 0
+    numPedidosTotal = 0
+    numValorTotal = 0
+}
+
+const botaoExcluir = document.querySelector('.botao-excluir')
+botaoExcluir.addEventListener('click', excluirPedidos)
+
 const totalResultados = () => {
     let resultadoDiario = `<p class="total-item">Números de pedidos durante o dia: ${numPedidosTotal}</p><p class="total-item">Valor total arrecadado: R$ ${numValorTotal.toFixed(2)}</p>`
     total.innerHTML = resultadoDiario
